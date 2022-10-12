@@ -27,6 +27,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     height: fit-content;
+    float: left;
     width: 40%;
     border: 5px ridge #204099;
   }
@@ -39,5 +40,6 @@ img {
 footer{
   background-color: #204099;
   color: white;
+
 }
 
