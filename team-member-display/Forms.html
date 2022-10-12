@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+
+    <!-- Form Tags -->
+    <form action="#" method="GET">
+        <fieldset>
+            <legend> Personal Details: </legend>
+            <p>
+                <label for="name">Name: <input type="text" id="name" maxlength="150" size="30"></label></br></br>
+                <label for="password">Password: <input type="password" id="password" maxlength="150" size="30"></label></br></br>
+                <label for="dob">DOB: <input type="date" id="dob" maxlength="150" size="30"></label></br></br>
+            </p>
+        </fieldset>
+        <br><br><br><br>
+        <!-- Text Area -->
+        <label for="">Enter your comments: <textarea name="comments"></textarea></label>
+        <br><br>
+
+        <!-- Radio Button -->
+        <p>
+            <label for="">What is your favorite cuisine?</label><br>
+            <input type="radio" name="favorite" title="Mexican" value="Mexican">Mexican <br>
+            <input type="radio" name="favorite" title="Indian" value="Indian">Indian <br>
+            <input type="radio" name="favorite" title="Japanese" value="Japanese" checked>Japanese <br>
+        </p>
+        <br><br>
+
+        <!-- Checkbox Button -->
+        <p>
+            <label for="">Which car brands have you owned <br>
+            <input type="checkbox" name="car-brand" value="Chrysler">Chrysler <br>
+            <input type="checkbox" name="car-brand" value="Toyota">Toyota <br>
+            <input type="checkbox" name="car-brand" value="Mercedes">Mercedes <br>
+            </label>
+            
+        </p>
+        <br><br>
+
+        <!-- Select button -->
+        <p>
+            <label for=""> What is your favorite drink?</label> <br>
+            <select title="drink">
+                <option value="water">Water</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="coke">Coke</option>
+            </select>
+        </p>
+        <br><br>
+
+        <!-- Date and Time Pickers -->
+        <p><label>Datetime-local: <input type="datetime-local" name="datetime-local"></label></p>
+        <p><label>Time: <input type="time" name="time"></label></p>
+        <p><label>Month: <input type="month" name="month"></label></p>
+        <p><label>Week: <input type="week" name="week"></label></p>
+        <br><br>
+
+        <!-- Number Spin boxes -->
+        <p><label>Number: <input type="number" name="number"></label></p>
+        <p><label>Number MinMax: <input type="number" name="numberNM" min="-10" max="10" step="5"></label></p>
+        <p><label>Range: <input type="range" name="range" min="-10" max="10" step="5"></label></p>
+        <br><br>
+
+        <!-- Semantic restrictions -->
+        <p><label>Email: <input type="email" name="email"></label></p>
+        <p><label>Phone: <input type="tel" name="phone"></label></p>
+        <p><label>URL: <input type="url" name="url"></label></p>
+        <br><br>
+        
+        <!-- Buttons -->
+        <button type="submit" value="Submit" name="submit" onclick="alert('Submitted')">Submit</button>
+        <button type="reset" value="Reset" name="reset">Reset</button>
+        
+    </form>
+</body>
+</html>
