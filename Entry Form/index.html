@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Team Member Entry Form</title>
+    <link rel="stylesheet" href="styles/entryForm.css">
 </head>
 <body>
+    <div class="testbox">
+        <form action="/">
+          <div class="banner">
+            <h1>Team B</h1>
+          </div>
+          <br/>
+          <br/>
+        <div class="columns">
+            <div class="item"><label>ID<span>*</span> <input type="text" id="idDigit" maxlength="4"></label></div>
+            <div class="item"><label>First Name<span>*</span> <input type="text" id="fname" maxlength="150"></label></div>
+            <div class="item"><label>Last Name<span>*</span> <input type="text" id="lname" maxlength="150"></label></div>
+            <div class="item"><label>Phone<span>*</span> <input type="tel" name="phone" id="phone"></label></div>
+            <div class="item"><label>Address<span>*</span> <input type="text" id="address" maxlength="300"></label></div>  
+        </div>
+            <button type="button" name="submit" id="submit"> Submit</button>
+            <button type="reset" value="Reset" name="Reset">Reset</button>
+    </form>
 
-    <form action="#" method="get">
-        <Fieldset>
-            <legend> Personal Details:</legend>
-            <p>
-                <label>ID: <input type="text" id="idDigit" maxlength="4"></label></br></br>
-                <label>First Name: <input type="text" id="fname" maxlength="150"></label></br></br>
-                <label>Last Name: <input type="text" id="lname" maxlength="150"></label></br></br>
-                <label>Phone: <input type="tel" name="phone"></label></br></br>
-                <label>Address <input type="text" id="address" maxlength="300"></label></br></br>   
-            </p>
-                <button type="submit" value="Submit" name="submit" onclick="alert ('Submitted!')"> Submit</button>
-                <button type="reset" value="Reset" name="Reset">Reset</button>
-        </Fieldset>
+    <label ><input type="file" name="myFile" id="inputFile">Info File input</label>
 
-        <label ><input type="file" name="myFile" id="inputFile">Info File input</label>
-        
-        <pre id="output"></pre>
-
-        <script>
-            document.getElementById("inputFile").addEventListener('change', function(){
-            var fr = new FileReader();
-            fr.onload=function() {
-                document.getElementById('output').textContent = fr.result;
-            }
-            fr.readAsText(this.files[0])
-            })
-        </script>
-    
+    <div>
+        <table id="output">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </table>
+    </div>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/entry_form.js"></script>
 </body>
 </html>
