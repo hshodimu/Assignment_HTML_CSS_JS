@@ -8,7 +8,16 @@
 
     <link rel="stylesheet" href="Workout.css" type="text/css">
     
-    <!-- Script Placholder area-->
+    <script>
+        let day;
+        let workoutType;
+        let workoutDay;
+        let picture;
+        let exercise1;
+        let exercise2;
+        let exercise3;
+        var exersiceLink = 'https://musclewiki.com/Exercises/Male/';
+    </script>
 
 </head>
 <body>
@@ -17,56 +26,104 @@
         </br>
         <hr>
     </header>
+
+    <!-- Weekday Selection Form-->
     
-    <form action="">
+    <form>
         <fieldset>
-            <legend>Select a Workout day</legend>
+            <legend>Select a Workout day: </legend>
             <input type="radio"  title="Sunday" name="weekday" value="Sunday"> Sunday </br> </br>
             <input type="radio"  title="Monday" name="weekday" value="Monday"> Monday </br> </br>
-            <input type="radio"  title="Tuesday" name="weekday" value=" Tuesday"> Tuesday </br> </br>
+            <input type="radio"  title="Tuesday" name="weekday" value="Tuesday"> Tuesday </br> </br>
             <input type="radio"  title="Wednesday" name="weekday" value="Wednesday"> Wednesday </br> </br>
             <input type="radio"  title="Thursday" name="weekday" value="Thursday"> Thursday </br> </br>
             <input type="radio"  title="Friday" name="weekday" value="Friday"> Friday </br> </br>
             <input type="radio"  title="Saturday" name="weekday" value="Saturday"> Saturday </br> </br>
             <hr>
-            <button type="submit" value="Submit" name="submit" onclick="alert ('Submitted!')"> Submit</button>
+            <button type="button" name="daySelect" onclick="exersiceSelector()"> GO! </button>
         </fieldset>   
     </form> 
 
-    <!-- Placeholder area for display workout selected-->
-    <section>
+    
+    <!--Weekday case selection -->
+
+    <script>
+        function exersiceSelector(){
+       
+            day = document.querySelector('input[name=weekday]:checked').value;
+            console.log(day)
+
+
+            switch(day){
+                case 'Monday':
+                    console.log('Monday Selected')
+                    exercise1 = 'Shoulders';
+                    exercise2 = 'Biceps';
+                    exercise3 = 'Triceps';
+                    workoutDay = true;
+                break;
+                case 'Tuesday':
+                    console.log('Tuesday Selected')
+                    exercise1 = 'Chest';
+                    exercise2 = 'Abdominals';
+                    exercise3 = 'Obliques';
+                    workoutDay = true;
+                break; 
+                case 'Wednesday':
+                    console.log('Wednesday Selected')
+                    exercise1 = 'Forearms';
+                    exercise2 = 'Biceps';
+                    exercise3 = 'Triceps';
+                    workoutDay = true; 
+                break;
+                case 'Thursday':
+                    console.log('Thursday Selected')
+                    exercise1 = 'Traps';
+                    exercise2 = 'Lats';
+                    exercise3 = 'Lowerback';
+                    workoutDay = true;
+                break; 
+                case 'Friday':
+                    console.log('Friday Selected')
+                    exercise1 = 'Glutes';
+                    exercise2 = 'Quads';
+                    exercise3 = 'Calves';
+                    workoutDay = true; 
+                break;
+                default:
+                    console.log('No Case Selected')
+                    workoutDay = false;
+                break;
+            }
         
-        <table id="Workout">
-            
-            <thead>
-                <tr>
-                    <th>Workout Day Area</th>
-                    <th>Exersice</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sholder</td>
-                    <td><a href="https://musclewiki.com/Bodyweight/Male/Shoulders"> Sholder link</a></td>
-                </tr>
-                <tr>
-                    <td>Biceps</td>
-                    <td><a href="https://musclewiki.com/Bodyweight/Male/Shoulders"> Biceps link</a></td>
-                </tr>
-                <tr>
-                    <td>Triceps</td>
-                    <td><a href="https://musclewiki.com/Exercises/Male/Triceps">Triceps</a></td>
-                </tr>
-            <tfoot>
-                <tr>
-                    <td><img title="Output Placeholder" src="WorkoutAreaPlaceholder.png" height="200" width="200"></td>
-                </tr>
-            </tfoot>
-            </table>
-        
-    </section>
+
+        //Template for the selected case    
+        if(workoutDay == true){
+        document.getElementById("exerciseDisplay").innerHTML =`
+            <img src='Workout${day}.png'>
+            <p>Today is ${day}, your exercise for today is: </p>
+            </br>
+            <p><a href='${exersiceLink + exercise1}'>${exercise1}</a></p>
+            <p><a href='${exersiceLink + exercise2}'>${exercise2}</a></p>
+            <p><a href='${exersiceLink + exercise3}'>${exercise3}</a></p>
+        `;
+        }
+        else{
+            document.getElementById("exerciseDisplay").innerHTML = "Free day, do nothing"
+        }
+    }
+    </script>
+
+
+
+    <div id ="exerciseDisplay">
+        <img src='Workout Template.png'>
+        <p>Select the day for your exercise</p>
+    </div>
     
     <footer>
+        <!--Added later after formating properly on css file  <a href="https://musclewiki.com/"></a> -->
+        <p>Workouts listed from musclewiki.com</p>
 
     </footer>
 
