@@ -1,5 +1,6 @@
 header{
   background-color: white;
+  width: 100%;
   padding: 1%;
 }
 
@@ -10,36 +11,69 @@ body{
 
 }
 
+form{
+  border: gray ridge 5px;
+  padding: 5px;
+}
+
+
 h1{
-  
+
   color: #204099;
   font-size: xx-large;
   text-align: center;
 }
 
-#weekday{
-  background-color: white;
+#exerciseDisplay{
+  margin-top: 100px;
+
 }
 
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: fit-content;
-    float: left;
-    width: 40%;
-    border: 5px ridge #204099;
-  }
+#exerciseDisplay img{
+  display: block;
+  height: fit-content;
+  width: 40%;
+  border: 5px ridge #204099;
+}
 
-  table, th, td{
-    border: 5px ridge gray;
-    width: 100%;
+
+
+#exerciseDisplay p{
+    position: relative;
+    left: 45%;
+    bottom: 350px;
+   font-weight: 900;
 }
 
 footer{
+  padding: 10px;
+  width: 100%;
   background-color: #204099;
   color: white;
 
 }
+
+footer  a:link{
+  color: white;
+  text-decoration: none;
+
+}
+
+footer  a:visited{ 
+  color: white;
+  text-decoration: none;
+
+}
+
+footer a:hover{ 
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+
+
 
