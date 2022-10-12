@@ -1,1 +1,3 @@
+{"id":"1234", "firstName":"John", "lastName":"Doe", "phone":"555-555-5555", "address":"1234 Sesame St. Denver, CO 77077"},
+{"id":"1234", "firstName":"John", "lastName":"Doe", "phone":"555-555-5555", "address":"1234 Sesame St. Denver, CO 77077"},
 {"id":"1234", "firstName":"John", "lastName":"Doe", "phone":"555-555-5555", "address":"1234 Sesame St. Denver, CO 77077"}
