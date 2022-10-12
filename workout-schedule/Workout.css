@@ -1,0 +1,43 @@
+header{
+  background-color: white;
+  padding: 1%;
+}
+
+body{
+  background-color: #f5f8fa;
+  color: black;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+
+}
+
+h1{
+  
+  color: #204099;
+  font-size: xx-large;
+  text-align: center;
+}
+
+#weekday{
+  background-color: white;
+}
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width: 40%;
+    border: 5px ridge #204099;
+  }
+
+  table, th, td{
+    border: 5px ridge gray;
+    width: 100%;
+}
+
+footer{
+  background-color: #204099;
+  color: white;
+}
+
