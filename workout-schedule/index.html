@@ -32,13 +32,13 @@
     <form>
         <fieldset>
             <legend>Select a Workout day: </legend>
-            <input type="radio"  title="Sunday" name="weekday" value="Sunday"> Sunday </br> </br>
-            <input type="radio"  title="Monday" name="weekday" value="Monday"> Monday </br> </br>
-            <input type="radio"  title="Tuesday" name="weekday" value="Tuesday"> Tuesday </br> </br>
-            <input type="radio"  title="Wednesday" name="weekday" value="Wednesday"> Wednesday </br> </br>
-            <input type="radio"  title="Thursday" name="weekday" value="Thursday"> Thursday </br> </br>
-            <input type="radio"  title="Friday" name="weekday" value="Friday"> Friday </br> </br>
-            <input type="radio"  title="Saturday" name="weekday" value="Saturday"> Saturday </br> </br>
+            <input type="radio"  title="Sunday" name="weekday" value="Sunday"> Sunday </br> 
+            <input type="radio"  title="Monday" name="weekday" value="Monday"> Monday </br> 
+            <input type="radio"  title="Tuesday" name="weekday" value="Tuesday"> Tuesday </br> 
+            <input type="radio"  title="Wednesday" name="weekday" value="Wednesday"> Wednesday </br> 
+            <input type="radio"  title="Thursday" name="weekday" value="Thursday"> Thursday </br> 
+            <input type="radio"  title="Friday" name="weekday" value="Friday"> Friday </br> 
+            <input type="radio"  title="Saturday" name="weekday" value="Saturday"> Saturday </br>
             <hr>
             <button type="button" name="daySelect" onclick="exersiceSelector()"> GO! </button>
         </fieldset>   
@@ -46,7 +46,6 @@
 
     
     <!--Weekday case selection -->
-
     <script>
         function exersiceSelector(){
        
@@ -102,14 +101,13 @@
         document.getElementById("exerciseDisplay").innerHTML =`
             <img src='Workout${day}.png'>
             <p>Today is ${day}, your exercise for today is: </p>
-            </br>
             <p><a href='${exersiceLink + exercise1}'>${exercise1}</a></p>
             <p><a href='${exersiceLink + exercise2}'>${exercise2}</a></p>
             <p><a href='${exersiceLink + exercise3}'>${exercise3}</a></p>
         `;
         }
         else{
-            document.getElementById("exerciseDisplay").innerHTML = "Free day, do nothing"
+            document.getElementById("exerciseDisplay").innerHTML = "<img src='Relaxation.png'> <p>Free day, relax</p>"
         }
     }
     </script>
@@ -117,15 +115,16 @@
 
 
     <div id ="exerciseDisplay">
-        <img src='Workout Template.png'>
         <p>Select the day for your exercise</p>
+        <img src='Workout Template.png'>
     </div>
+</br>
     
+<div>
     <footer>
-        <!--Added later after formating properly on css file  <a href="https://musclewiki.com/"></a> -->
-        <p>Workouts listed from musclewiki.com</p>
-
+        <p>Workouts listed from <a href="https://musclewiki.com/">musclewiki.com</a></p>
     </footer>
+</div>
 
 </body>
 </html>
